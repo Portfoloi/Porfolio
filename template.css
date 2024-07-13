@@ -1,0 +1,327 @@
+
+@font-face {
+    font-family: "GOON";
+    src: url(Fonts/RobotoMono-Regular.ttf);
+}
+
+
+/*KEYFRAMES*/
+@keyframes cursor{
+    50% {border-color: transparent;}
+}
+@keyframes typing{
+    from {width: 0%;}
+    to { width: 100%; }
+}
+@keyframes fade-up {
+    0%{
+        opacity: 0;
+        transform: translateY(30px)scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px)scale(1);
+    }
+    
+}
+
+@keyframes fade-out {
+    0%{
+        opacity: 0;
+        transform: translateY(-30px)scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px)scale(1);
+    }
+}
+
+body{
+    background-color:#11141A;
+    font-size: 80%;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#topObject{
+    position: fixed;
+    height: 100px;
+    width: 99.22%;
+    background-color: #1A1E29;
+    z-index: 1000;
+    
+}
+
+.buttonClass{
+    font-family:"GOON", sans-serif;
+    letter-spacing: 3px;
+    font-weight: 400; 
+    font-size: larger;
+    color: #FFF2DA;
+    background-color: inherit;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#button1{
+    color: inherit;
+    opacity: inherit;
+    font-family: inherit;
+    letter-spacing: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    background-color: inherit;
+    position: absolute;
+    height: 50px;
+    width: 25%;
+    border: none;
+}
+#button2{
+    color: inherit;
+    opacity: inherit;
+    font-family: inherit;
+    letter-spacing: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    background-color: inherit;
+    position: absolute;
+    height: 50px;
+    width: 25%;
+    border: none;
+}
+#button3{
+    color: inherit;
+    opacity: inherit;
+    font-family: inherit;
+    letter-spacing: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    background-color: inherit;
+    position: absolute;
+    height: 50px;
+    width: 25%;
+    border: none;
+}
+.EffectUnderButton{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(250, 195, 112);
+    height: 2.5px;
+    z-index: 20;
+    opacity: 1;
+}
+
+.special_Letter{
+    opacity: 1;
+    background-color:#FAC370;
+    justify-content: center;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    background-color: #1A1E29;
+    margin-bottom: 1em;
+    z-index: -10;
+}
+
+
+
+.center-obj {
+    display: inline-block;
+    text-align: center;
+    font-family:"GOON", sans-serif;
+    letter-spacing: 3px;
+    font-weight: 400; 
+    z-index: 1;
+}
+
+.Section2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2em;
+    padding-left: 15%;
+
+    background-color: #1A1E29;
+    margin-bottom: 1em;
+    
+}
+.Section2-obj{
+    text-align: left;
+    color: #FFF2DA;
+    font-family:"GOON", sans-serif;
+    letter-spacing: 3px;
+    font-weight: 400; 
+    overflow: auto;
+    
+    width: 400px;
+    height: 800px;
+    
+}
+
+
+section{
+    justify-content: center;
+    padding: 2em;
+    height: 1000px;
+    max-width: 100%;
+    background-color: #1A1E29;
+    border-bottom: 1px solid #cccccc00;
+    margin-bottom: 1em;
+}
+
+footer{
+    background-color: rgb(53, 132, 94);
+}
+
+
+#Welcoming{
+    color: #FFF2DA;
+    font-family: inherit;
+    letter-spacing: inherit;
+    font-weight: inherit; 
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    border-right: 5px solid;
+    
+}
+
+.typingAnim{
+    animation:
+        typing 2s,
+        cursor .4s step-end infinite alternate;
+}
+
+
+#SpecialAgain{
+    color: #CEFFAB;
+    font-family: inherit;
+    letter-spacing: inherit;
+    font-weight: inherit; 
+    font-size: xx-large;
+    
+}
+
+#SpecialAgain2{
+    color: #E49BFE;
+    font-family: inherit;
+    letter-spacing: inherit;
+    font-weight: inherit; 
+    font-size: xx-large;
+}
+
+#SpecialAgain3{
+    color:#F1A3A3;
+    font-family: inherit;
+    letter-spacing: inherit;
+    font-weight: inherit; 
+    font-size: xx-large;
+}
+#AboutMe{
+    font-family: inherit;
+    letter-spacing: inherit;
+    font-weight: inherit; 
+}
+
+#Me{
+    color: #FAC370;
+    font-family: inherit;
+    letter-spacing: inherit;
+    font-weight: inherit; 
+    font-size: 200%;
+}
+#About{
+    color: #A9FFFB;
+    font-family: inherit;
+    letter-spacing: inherit;
+    font-weight: inherit; 
+    font-size: 200%;
+}
+#writing1{
+    font-size: 90%;
+}
+
+.Highlight{
+    color: rgb(241, 163, 163);
+}
+
+.videos{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+   
+    left: -10%;
+    bottom: 15%;
+    
+}
+#videoDiv{
+    z-index: -100;
+}
+
+.fadeout{
+    animation: fade-out 0.5s;
+}
+.fadein{
+    animation: fade-up 0.5s;
+}
+
+.video{
+    border-radius: 20px;
+}
+
+#SkillDiv{
+    text-align: left;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    left: -400px;
+    top: 250px;
+    overflow: auto;
+    font-family:"GOON", sans-serif;
+    letter-spacing: 3px;
+   
+}
+#Skill{
+    color: #E49BFE ;
+    font-weight: 400;
+    font-family: "GOON", sans-serif;
+    font-size: 200%;
+
+}
+
+
+.list{
+    color: #FFF2DA;
+    font-family:"GOON", sans-serif;
+    letter-spacing: 3px;
+    font-weight: 400; 
+    overflow: auto;
+}
+
+
+
+
+.center iframe{
+    position: absolute;
+    z-index: 0;
+    width: 99%;
+    height: 100%;
+    opacity: 0.2;
+    border: none;
+    background-color: #1A1E29;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
