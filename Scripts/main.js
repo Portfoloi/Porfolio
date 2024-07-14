@@ -10,6 +10,7 @@ const video = Array.from(HTML.getElementsByClassName("video"))
 const videoDiv = HTML.getElementById("videoDiv")
 const Hi_ = HTML.getElementById("SpecialAgain")
 const Welcome = document.getElementById('Welcoming');
+const pfp = HTML.getElementById("pfp")
 
 Welcome.classList.add("typingAnim")
 
@@ -136,6 +137,12 @@ video.forEach(film => {
         letter.addEventListener("mouseover", event => {
             let obj = event.target;
 
+
+            pfp.style.zIndex = -100
+            pfp.classList.remove("fadein")
+            void pfp.offsetWidth
+            pfp.classList.add("fadein")
+
             if (!debounceVideo && obj.className === "Highlight") {
                 console.log("Yippie")
                 debounceVideo = true
@@ -168,6 +175,22 @@ video.forEach(film => {
                 film.classList.remove("fadein")
                 void film.offsetWidth
                 film.classList.add("fadein")
+            } else if (!debounceVideo && obj.className === "Highlight programming") {
+                
+                console.log("Yippie")
+                debounceVideo = true
+               
+                obj.style.color = `rgb(255, 100, 59)`
+
+                videoDiv.style.zIndex = 100
+               
+                film.src = "Videos/2024-07-14 14-27-30.mp4"
+                film.load()
+                film.play()
+
+                film.classList.remove("fadein")
+                void film.offsetWidth
+                film.classList.add("fadein")
             }
                 
                
@@ -175,6 +198,7 @@ video.forEach(film => {
         letter.addEventListener("mouseleave", event => {
             let obj = event.target;
             
+            pfp.style.zIndex = 100
 
             if (debounceVideo == true && obj.className === "Highlight") {
                 console.log("Yippie no")
@@ -191,6 +215,19 @@ video.forEach(film => {
                 videoDiv.style.zIndex = -100
 
             }else if (debounceVideo == true && obj.className === "Highlight music") {
+                console.log("Yippie no")
+                debounceVideo = false
+
+                
+               
+                obj.style.color = `rgb(241, 163, 163)`
+                film.pause()
+
+                film.classList.remove("fadeout")
+                void film.offsetWidth
+                film.classList.add("fadeout")
+                videoDiv.style.zIndex = -100
+            }else if (debounceVideo == true && obj.className === "Highlight programming") {
                 console.log("Yippie no")
                 debounceVideo = false
 
